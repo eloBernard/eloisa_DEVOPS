@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: .2s linear;
+    list-style: none;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+   
+    background: linear-gradient(180deg, #5AB9EA 0%, #8860D0 57.03%);
+}
+
+.wrapper {
+    margin:auto;
+    justify-content: center;
+    width: 90%;
+    max-width: 885px;
+    min-height: 400px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 6px 6px 8px 5px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.wrapper .logo {
+    width: 80%;
+    max-width: 535px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.wrapper h1 {
+    line-height: 2;
+    text-align: center;
+    color: #8860D0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    max-width: 294px;
+    margin: 20px auto; 
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.input-box input::placeholder {
+    color: #8860D0;
+}
+
+.input-box input:focus {
+    color: #84CEEB;
+    border-color: #84CEEB; 
+}
+
+.wrapper .btn {
+    width: 50%;
+    max-width: 150px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #84CEEB;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #8860D0;
+    cursor: pointer;
+    margin: 20px auto; 
+    display: block; 
+}
+
+.wrapper .btn-create-account {
+    width: 50%;
+    max-width: 150px;
+    height: 45px;
+    padding: 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #84CEEB;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #8860D0;
+    cursor: pointer;
+    margin: 20px auto; 
+    display: block; 
+}
+
+.btn:hover,
+.btn-create-account:hover
+ {
+    background:#5680E9;
+    color: #ffffff;
+}
+
+.wrapper .signup_link {
+    text-align: center;
+    color: #8860D0;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+/* ----  NAV BAR  ---- */
+
+.header .logo{
+    width: 100%;
+    max-width: 200px;
+    max-height: 100px;
+    margin:0 0 10px;
+    
+}
+
+.navbar{
+    display: flex;
+    background-color: #FFF;
+    padding: 0 70px 0 ;
+    font-weight: bold;
+    box-shadow: 6px 6px 8px 5px rgba(0, 0, 0, 0.25);
+}
+.navbar .a{
+    display: inline-block;
+    line-height: 80px;
+    justify-content: center;
+    
+}
+
+nav ul{
+    text-align: center;
+    margin: auto;
+    
+}
+
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+    font-size: 20px;
+}
+nav ul li a{
+    padding: 2px 7px 7px 2px;
+    text-decoration: none; /* Reset text decoration */
+    color: #8860D0;
+    border-bottom: 3px solid transparent; /* Initial state for hover effect */
+    transition: .5s;
+}
+
+
+.navbar .btn{
+   border: 3px solid #5AB9EA;
+    border-radius: 40px;
+    margin: 10px 20px 0 0; /* Adjust margin for positioning */
+    padding: 10px 25px; /* Adjust padding for the button size */
+    float: right; /* Align buttons to the right */
+    
+}
+.navbar .btn-signup{
+    border: 3px solid #5AB9EA;
+    border-radius: 40px;
+    margin: 10px 20px 0 0; /* Adjust margin for positioning */
+    padding: 10px 25px; /* Adjust padding for the button size */
+    float: right; /* Align buttons to the right */
+}
+.btn-signup:hover{
+    background:#5680E9;
+    color: #ffffff;
+}
+nav ul li a:hover{
+    border-bottom: 3px solid #8860D0;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color:#8860D0;
+    position:fixed;
+    margin: 20px 400px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+
+}
+
+
+
+/* ----  Responsiveness  Nav Bar--- */
+
+
+@media (max-width: 952px) {
+    .checkbtn {
+       display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #FFF;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px ;
+        line-height: 30px;
+    }
+    nav ul li a{
+        padding: 2px 7px 7px 2px;
+    text-decoration: none; /* Reset text decoration */
+    color: #8860D0;
+    border-bottom: 3px solid transparent; /* Initial state for hover effect */
+    transition: .5s;
+    }
+    a:hover{
+        background: none;
+        color: #8860D0;
+    }
+    .navbar .btn{
+        margin: auto;
+    }
+    
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+/* ----  Responsiveness  for login and Sign up form---- */
+@media (max-width: 780px) {
+    .wrapper {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .wrapper .logo {
+        width: 100%;
+        max-width: none;
+    }
+
+    .input-box {
+        margin: 20px auto; 
+    }
+
+    .btn,
+    .btn-create-account {
+        width: 100%;
+        max-width: none;
+        margin: 20px auto; 
+    }
+}
+
+
+/*social media */
+/* Bouton CV et Contact */
+div[class*=box] {
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+ justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    color: #bf4080;
+}
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    color: #b30059;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+}
+
+.btn:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+ border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+}
+
+.btn:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+/* Bouton télécharger */
+.download {
+    margin-left: 40px;
+    width: 50px;
+    height: 50px;
+}
+
+.download:hover {
+    filter: invert(100%);
+}
+
+/* Réseaux sociaux */
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-top: 40px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.box-button {
+    padding-bottom: 20px;
+}
+
+.box-1 img {
+    border: 2px solid transparent;
+    transition: all 1s ease;
+}
+
+.box-2 img {
+    border: 2px solid transparent;
+    transition: all 1s ease;
+}
+
+.box-3 img {
+    border: 2px solid transparent;
+    transition: all 1s ease;
+}
+
+.box-1:hover img {
+    filter: invert(100%);
+    border-radius: 10px;
+    transform:scale(1.25);
+}
+
+.box-2:hover img {
+    filter: invert(100%);
+    border-radius: 10px;
+    transform:scale(1.25);
+}
+
+.box-3:hover img {
+    filter: invert(100%);
+    border-radius: 10px;
+    transform:scale(1.25);
+}
+
+@keyframes background {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Responsive page réduite */
+@media screen and (max-width: 1100px) {
+    .text {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+ .socialmedia {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    img {
+        justify-content: space-evenly;
+        width: 70px;
+        height: 70px;
+    }
+
+    .box-1:hover img {
+        filter: invert(100%);
+        border-radius: 10px;
+        transform:scale(1.15);
+    }
+
+    .box-2:hover img {
+        filter: invert(100%);
+        border-radius: 10px;
+        transform:scale(1.15);
+    }
+
+    .box-3:hover img {
+        filter: invert(100%);
+        border-radius: 10px;
+        transform:scale(1.15);
+    }
+  
+/*social media */
+
+footer {
+    display: flex;
+    justify-content: center;
+}

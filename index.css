@@ -12,8 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffffb3;
-    color: #003cb3;
+    /*background-color #ffffb3*/
+    background-image:url("eaux.png");
+    color:  #0040ff;
 }
 
 /* Prendre en compte la bordure */
@@ -32,40 +33,58 @@ footer {
     display: flex;
     justify-content: center;
 }
-
-/* Enlève le soulignement des liens */
+/*trial /
+.navbar-header
+/*stop try*
+/*e soulignement des liens */
 a {
     text-decoration: none;
-    color: #e6005c;
+    color: #cc0044;
     margin-bottom: 5px;
 }
-
 /* Profil */
 .text {
     justify-content: center;
-    background-color: #b3ffb3;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    /*background-color #b3ffb3*/
+    /*background-image url("seass.png")*/
     box-shadow: 5px 5px #ffaa80;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
     margin-bottom: 3px;
 }
+/*try*/
+.navbar-header a{
+  font-family:'Raleway',sans-serif;
+  letter-spacing:1px;
+}
+nav .navbar-header a,ul li a{
+  color:#fff;
 
+}
+nav .navbar-header button .fa{
+  color:#fff;
+  border:1px solid #fff;
+  border-radius:5px;
+  padding:4px 10px;
+  font-size:1.5em;
+  position:absolute;
+  top:-0.5px;
+  left:-50px;
+  padding-bottom: 2px 5px;
+}
+
+.glyphicon-search{
+  color:#2874f0;
+}
+
+
+/*try*/
 .box-text {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 3px;
-}
-
-/* Compétences */
-.skill {
-    background-color: #d9ffb3;
-    box-shadow: 5px 5px #ff8080;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 
 .skill h3 {
@@ -74,6 +93,7 @@ a {
     margin-right: 10px;
 }
 
+/*skills*/
 .container {
     width: 500px;
     margin-left: 10px;
@@ -107,9 +127,9 @@ a {
 /* Bouton CV et Contact */
 div[class*=box] {
     height: 33.33%;
-    width: 100%; 
+    width: 100%;
     display: flex;
-    justify-content: center;
+ justify-content: center;
     align-items: center;
     margin-top: 15px;
     color: #bf4080;
@@ -153,7 +173,7 @@ div[class*=box] {
     z-index: 1;
     opacity: 0;
     transition: all 0.3s;
-    border: 1px solid rgba(255,255,255,0.5);
+ border: 1px solid rgba(255,255,255,0.5);
     transform: scale(1.2,1.2);
 }
 
@@ -206,7 +226,7 @@ img {
     border: 2px solid transparent;
     transition: all 1s ease;
 }
-  
+
 .box-1:hover img {
     filter: invert(100%);
     border-radius: 10px;
@@ -240,22 +260,7 @@ img {
         margin-left: 10px;
         margin-right: 10px;
     }
-
-    .socialmedia {
-        padding-right: 20%;
-        padding-left: 20%;
-        padding-top: 40px;
-    }
-}
-
-/* Responsive téléphone (testé uniquement sur Samsung Galaxy S8 et page responsive web) */
-@media screen and (max-width: 800px) {
-    .text {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .socialmedia {
+ .socialmedia {
         padding-right: 20px;
         padding-left: 20px;
         padding-top: 20px;
@@ -272,13 +277,13 @@ img {
         border-radius: 10px;
         transform:scale(1.15);
     }
-    
+
     .box-2:hover img {
         filter: invert(100%);
         border-radius: 10px;
         transform:scale(1.15);
     }
-    
+
     .box-3:hover img {
         filter: invert(100%);
         border-radius: 10px;
@@ -297,11 +302,12 @@ img {
         margin-right: 10px;
         background-color: #4080bf;
     }
-
-    .skills {
+ .skills {
         text-align: center;
         padding-top: 10px;
         padding-bottom: 10px;
         color: #cc66cc;
     }
   }
+
+
